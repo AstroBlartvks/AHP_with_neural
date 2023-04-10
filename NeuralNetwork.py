@@ -72,8 +72,8 @@ class Training:
     def get_base(self):
         all_strings = self.base_file.split("\n")
         all_info = len(all_strings)
-        input_val = list([list(map(int, all_strings[x].split(","))) for x in range(all_info) if x % 2 == 0])
-        target_val = list([list(map(int, all_strings[x].split(","))) for x in range(all_info) if x % 2 == 1])
+        input_val = list([list(map(float, all_strings[x].split(","))) for x in range(all_info) if x % 2 == 0])
+        target_val = list([list(map(float, all_strings[x].split(","))) for x in range(all_info) if x % 2 == 1])
         return input_val, target_val
 
 
